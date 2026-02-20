@@ -12,12 +12,13 @@ export const Slide1 = () => (
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="w-48 h-48 glass rounded-full flex items-center justify-center p-0 shadow-[0_0_50px_rgba(255,255,255,0.1)] overflow-hidden relative border-4 border-white/10"
+        className="w-48 h-48 glass rounded-full flex items-center justify-center shadow-[0_0_60px_rgba(255,255,255,0.15)] overflow-hidden relative border-4 border-white/20"
       >
         <img 
             src="/media/logo.png" 
             alt="Sinergo Logo" 
-            className="w-[140%] h-[140%] object-cover relative z-10"
+            className="absolute min-w-[170%] min-h-[170%] object-cover z-10"
+            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
             onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -29,6 +30,7 @@ export const Slide1 = () => (
             <span className="text-white font-black text-6xl">S</span>
         </div>
       </motion.div>
+
 
 
       <h1 className="text-7xl md:text-8xl font-black text-white tracking-tighter uppercase leading-none">
