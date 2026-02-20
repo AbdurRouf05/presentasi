@@ -6,25 +6,52 @@ import { motion } from 'framer-motion';
 import { ShieldAlert, Zap, Cpu, Bell, User, MessageSquare, Terminal, Rocket, CheckCircle, Camera } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const MediaPlaceholder = ({ title, type = "video", variant = "mobile" }: { title: string; type?: "video" | "image"; variant?: "mobile" | "desktop" }) => (
-    <div className={cn(
-        "glass rounded-3xl flex flex-col items-center justify-center border-2 border-dashed border-white/20 group hover:border-sinergo-blue transition-all cursor-pointer overflow-hidden relative mx-auto",
-        variant === "mobile" ? "aspect-[9/19] w-full max-w-[280px]" : "aspect-video w-full"
-    )}>
-        <div className="absolute inset-0 bg-glow opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="relative z-10 flex flex-col items-center p-6 text-center">
-            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                {type === "video" ? (
-                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+const MediaPlaceholder = ({ title, src, type = "video", variant = "mobile" }: { title: string; src?: string; type?: "video" | "image"; variant?: "mobile" | "desktop" }) => {
+    const [hasError, setHasError] = React.useState(!src);
+
+    return (
+        <div className={cn(
+            "glass rounded-3xl flex flex-col items-center justify-center border-2 border-dashed border-white/20 group hover:border-sinergo-blue transition-all cursor-pointer overflow-hidden relative mx-auto",
+            variant === "mobile" ? "aspect-[9/19] w-full max-w-[280px]" : "aspect-video w-full"
+        )}>
+            {!hasError && src ? (
+                type === "video" ? (
+                    <video 
+                        src={src} 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onError={() => setHasError(true)}
+                    />
                 ) : (
-                    <Camera className="text-white" size={24} />
-                )}
-            </div>
-            <p className="text-white/40 font-bold text-xs uppercase tracking-widest">{title}</p>
-            <p className="text-white/20 text-[10px] mt-1 font-medium">{type === "video" ? "MP4 / VIDEO" : "PNG / JPG"}</p>
+                    <img 
+                        src={src} 
+                        alt={title} 
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onError={() => setHasError(true)}
+                    />
+                )
+            ) : (
+                <>
+                    <div className="absolute inset-0 bg-glow opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative z-10 flex flex-col items-center p-6 text-center">
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            {type === "video" ? (
+                                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+                            ) : (
+                                <Camera className="text-white" size={24} />
+                            )}
+                        </div>
+                        <p className="text-white/40 font-bold text-xs uppercase tracking-widest leading-tight">{title}</p>
+                        <p className="text-sinergo-blue/60 text-[10px] mt-2 font-black">DROP FILE IN /public{src}</p>
+                    </div>
+                </>
+            )}
         </div>
-    </div>
-);
+    );
+};
 
 
 export const Slide9 = () => (
@@ -43,7 +70,7 @@ export const Slide9 = () => (
                     </ul>
                 </div>
             </div>
-            <MediaPlaceholder title="Anti-Fraud Protection" variant="mobile" />
+            <MediaPlaceholder title="Anti-Fraud Protection" src="/media/feature_antifraud.mp4" variant="mobile" />
         </div>
     </SlideLayout>
 );
@@ -51,7 +78,7 @@ export const Slide9 = () => (
 export const Slide10 = () => (
     <SlideLayout title="Feature Recap & AI" subtitle="Complete Ecosystem Tour">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-            <MediaPlaceholder title="Full Feature Tour" type="video" variant="mobile" />
+            <MediaPlaceholder title="Full Feature Tour" src="/media/feature_tour.mp4" type="video" variant="mobile" />
             <div className="space-y-6">
                 <div className="glass p-8 rounded-3xl border-l-4 border-l-sinergo-blue bg-gradient-to-b from-white/5 to-transparent">
                     <h3 className="text-2xl font-black mb-6 flex items-center gap-3 tracking-tight">

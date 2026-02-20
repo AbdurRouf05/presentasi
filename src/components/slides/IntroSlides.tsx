@@ -12,14 +12,24 @@ export const Slide1 = () => (
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="w-48 h-48 bg-white rounded-3xl flex items-center justify-center p-6 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
+        className="w-48 h-48 glass rounded-3xl flex items-center justify-center p-4 shadow-[0_0_50px_rgba(255,255,255,0.1)] overflow-hidden relative"
       >
-        <div className="w-full h-full relative">
-           <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-sinergo-indigo font-black text-6xl">S</span>
-           </div>
+        <img 
+            src="/media/logo.png" 
+            alt="Sinergo Logo" 
+            className="w-full h-full object-contain relative z-10"
+            onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'flex';
+            }}
+        />
+        <div className="absolute inset-0 hidden flex-items-center justify-center bg-white">
+            <span className="text-sinergo-indigo font-black text-6xl">S</span>
         </div>
       </motion.div>
+
       <h1 className="text-7xl md:text-8xl font-black text-white tracking-tighter uppercase leading-none">
         Sinergo <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-sinergo-blue to-sinergo-indigo">

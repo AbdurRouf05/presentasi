@@ -7,25 +7,53 @@ import { MapPin, Camera, WifiOff, LayoutDashboard, Database, RefreshCw, Cloud, A
 import { cn } from '@/lib/utils';
 
 
-const MediaPlaceholder = ({ title, type = "video", variant = "mobile" }: { title: string; type?: "video" | "image"; variant?: "mobile" | "desktop" }) => (
-    <div className={cn(
-        "glass rounded-3xl flex flex-col items-center justify-center border-2 border-dashed border-white/20 group hover:border-sinergo-blue transition-all cursor-pointer overflow-hidden relative mx-auto",
-        variant === "mobile" ? "aspect-[9/19] w-full max-w-[280px]" : "aspect-video w-full"
-    )}>
-        <div className="absolute inset-0 bg-glow opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="relative z-10 flex flex-col items-center p-6 text-center">
-            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                {type === "video" ? (
-                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+const MediaPlaceholder = ({ title, src, type = "video", variant = "mobile" }: { title: string; src?: string; type?: "video" | "image"; variant?: "mobile" | "desktop" }) => {
+    const [hasError, setHasError] = React.useState(!src);
+
+    return (
+        <div className={cn(
+            "glass rounded-3xl flex flex-col items-center justify-center border-2 border-dashed border-white/20 group hover:border-sinergo-blue transition-all cursor-pointer overflow-hidden relative mx-auto",
+            variant === "mobile" ? "aspect-[9/19] w-full max-w-[280px]" : "aspect-video w-full"
+        )}>
+            {!hasError && src ? (
+                type === "video" ? (
+                    <video 
+                        src={src} 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onError={() => setHasError(true)}
+                    />
                 ) : (
-                    <Camera className="text-white" size={24} />
-                )}
-            </div>
-            <p className="text-white/40 font-bold text-xs uppercase tracking-widest">{title}</p>
-            <p className="text-white/20 text-[10px] mt-1 font-medium">{type === "video" ? "MP4 / VIDEO" : "PNG / JPG"}</p>
+                    <img 
+                        src={src} 
+                        alt={title} 
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onError={() => setHasError(true)}
+                    />
+                )
+            ) : (
+                <>
+                    <div className="absolute inset-0 bg-glow opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative z-10 flex flex-col items-center p-6 text-center">
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            {type === "video" ? (
+                                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+                            ) : (
+                                <Camera className="text-white" size={24} />
+                            )}
+                        </div>
+                        <p className="text-white/40 font-bold text-xs uppercase tracking-widest leading-tight">{title}</p>
+                        <p className="text-sinergo-blue/60 text-[10px] mt-2 font-black">DROP FILE IN /public{src}</p>
+                    </div>
+                </>
+            )}
         </div>
-    </div>
-);
+    );
+};
+
 
 export const Slide5 = () => (
     <SlideLayout title="Operational Flow" subtitle="From Local Storage to Cloud Sync">
@@ -79,7 +107,7 @@ export const Slide6 = () => (
                     <p className="text-white/60">Real-time selfie capture to eliminate "Joki Absen" (ghost workers).</p>
                 </div>
             </div>
-            <MediaPlaceholder title="Check-in Recording" type="video" variant="mobile" />
+            <MediaPlaceholder title="Check-in Recording" src="/media/feature_gps.mp4" type="video" variant="mobile" />
         </div>
     </SlideLayout>
 );
@@ -87,7 +115,7 @@ export const Slide6 = () => (
 export const Slide7 = () => (
     <SlideLayout title="Offline-First Mode" subtitle="SDG 9: Resilient Digital Infrastructure">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-            <MediaPlaceholder title="Offline Demo" type="video" variant="mobile" />
+            <MediaPlaceholder title="Offline Demo" src="/media/feature_offline.mp4" type="video" variant="mobile" />
             <div className="glass p-10 rounded-3xl">
                 <div className="text-sinergo-blue mb-6"><WifiOff size={64} /></div>
                 <h3 className="text-3xl font-black mb-4">Zero Signal? No Problem.</h3>
@@ -104,8 +132,8 @@ export const Slide8 = () => (
     <SlideLayout title="Admin Dashboard" subtitle="SDG 16: Data Transparency & Analytics">
         <div className="space-y-12">
             <div className="grid grid-cols-2 gap-8 items-start justify-center max-w-4xl mx-auto">
-                <MediaPlaceholder title="Admin Analytics" type="image" variant="mobile" />
-                <MediaPlaceholder title="Employee Rekap" type="image" variant="mobile" />
+                <MediaPlaceholder title="Admin Analytics" src="/media/admin_analytics.png" type="image" variant="mobile" />
+                <MediaPlaceholder title="Employee Rekap" src="/media/employee_rekap.png" type="image" variant="mobile" />
             </div>
             <div className="grid md:grid-cols-3 gap-6">
                 {[
