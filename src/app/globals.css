@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sinergo-blue: #3b82f6;
-  --color-sinergo-indigo: #4f46e5;
-  --color-sinergo-dark: #020617;
-  --color-sinergo-muted: #1e293b;
+  --color-sinergo-blue: #0eb1f4;
+  --color-sinergo-indigo: #151c46;
+  --color-sinergo-dark: #060b14;
+  --color-sinergo-muted: #111827;
 
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 }
 
 :root {
-  --background: #020617;
+  --background: #060b14;
   --foreground: #f8fafc;
-  --card: rgba(30, 41, 59, 0.7);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --primary: #4f46e5;
-  --primary-glow: rgba(79, 70, 229, 0.3);
+  --card: rgba(15, 23, 42, 0.7);
+  --card-border: rgba(14, 177, 244, 0.2);
+  --primary: #0eb1f4;
+  --primary-glow: rgba(14, 177, 244, 0.3);
 }
+
 
 body {
   background: var(--background);

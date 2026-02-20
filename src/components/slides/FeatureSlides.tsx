@@ -100,12 +100,13 @@ export const Slide6 = () => (
                     </h3>
                     <p className="text-white/60">Geo-fencing validation to ensure presence in designated zones.</p>
                 </div>
-                <div className="glass p-6 rounded-2xl border-l-4 border-l-sinergo-indigo">
+                <div className="glass p-6 rounded-2xl border-l-4 border-l-sinergo-blue">
                     <h3 className="text-xl font-bold flex items-center gap-3 mb-2">
-                        <Camera className="text-sinergo-indigo" /> Live Photo Proof
+                        <Camera className="text-sinergo-blue" /> Live Photo Proof
                     </h3>
                     <p className="text-white/60">Real-time selfie capture to eliminate "Joki Absen" (ghost workers).</p>
                 </div>
+
             </div>
             <MediaPlaceholder title="Check-in Recording" src="/media/feature_gps.mp4" type="video" variant="mobile" />
         </div>

@@ -76,7 +76,8 @@ export const Slide9 = () => (
 );
 
 export const Slide10 = () => (
-    <SlideLayout title="Feature Recap & AI" subtitle="Complete Ecosystem Tour">
+    <SlideLayout title="Feature Recap" subtitle="Complete Ecosystem Tour">
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <MediaPlaceholder title="Full Feature Tour" src="/media/feature_tour.mp4" type="video" variant="mobile" />
             <div className="space-y-6">
@@ -86,21 +87,22 @@ export const Slide10 = () => (
                     </h3>
                     <ul className="space-y-5">
                         <li className="group flex items-center gap-4 text-white/70 hover:text-white transition-colors">
-                            <div className="p-2 glass-light rounded-lg text-sinergo-indigo group-hover:bg-sinergo-indigo/20"><Bell size={20} /></div>
-                            <span className="font-semibold">Smart Notifications</span>
+                            <div className="p-2 glass-light rounded-lg text-sinergo-blue bg-white/10 group-hover:bg-sinergo-blue/20 shadow-[0_0_10px_rgba(14,177,244,0.3)] border border-white/20"><Bell size={20} /></div>
+                            <span className="font-semibold text-white">Smart Notifications</span>
                         </li>
                         <li className="group flex items-center gap-4 text-white/70 hover:text-white transition-colors">
-                            <div className="p-2 glass-light rounded-lg text-sinergo-indigo group-hover:bg-sinergo-indigo/20"><User size={20} /></div>
-                            <span className="font-semibold">Employee Self-Service</span>
+                            <div className="p-2 glass-light rounded-lg text-sinergo-blue bg-white/10 group-hover:bg-sinergo-blue/20 shadow-[0_0_10px_rgba(14,177,244,0.3)] border border-white/20"><User size={20} /></div>
+                            <span className="font-semibold text-white">Employee Self-Service</span>
                         </li>
                         <li className="group flex items-center gap-4 text-white/70 hover:text-white transition-colors">
-                            <div className="p-2 glass-light rounded-lg text-sinergo-indigo group-hover:bg-sinergo-indigo/20"><Cpu size={20} /></div>
-                            <span className="font-semibold text-sinergo-blue font-black uppercase tracking-widest text-xs">HR Copilot (AI Insight)</span>
+                            <div className="p-2 glass-light rounded-lg text-white bg-sinergo-blue/40 group-hover:bg-sinergo-blue/60 shadow-[0_0_15px_rgba(14,177,244,0.5)] border border-white/30"><Cpu size={20} /></div>
+                            <span className="font-bold text-white">HR Copilot <span className="text-sinergo-blue font-black tracking-widest text-[10px] ml-2 px-1.5 py-0.5 rounded bg-sinergo-blue/10 border border-sinergo-blue/20">AI</span></span>
                         </li>
                         <li className="group flex items-center gap-4 text-white/70 hover:text-white transition-colors">
-                            <div className="p-2 glass-light rounded-lg text-sinergo-indigo group-hover:bg-sinergo-indigo/20"><Zap size={20} /></div>
-                            <span className="font-semibold">Predictive Analytics</span>
+                            <div className="p-2 glass-light rounded-lg text-sinergo-blue bg-white/10 group-hover:bg-sinergo-blue/20 shadow-[0_0_10px_rgba(14,177,244,0.3)] border border-white/20"><Zap size={20} /></div>
+                            <span className="font-semibold text-white">Predictive Analytics</span>
                         </li>
+
                     </ul>
                 </div>
                 <div className="glass p-6 rounded-2xl bg-sinergo-blue/10 border-sinergo-blue/20">
@@ -127,17 +129,18 @@ export const Slide11 = () => (
                 <h4 className="text-sm font-black uppercase text-sinergo-blue tracking-widest">Roadmap 2026</h4>
                 <div className="space-y-3">
                     <div className="glass p-4 rounded-xl flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-sinergo-blue" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-sinergo-blue shadow-[0_0_8px_#0eb1f4]" />
                         <span className="font-medium">Advanced Biometrics</span>
                     </div>
                     <div className="glass p-4 rounded-xl flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-sinergo-indigo" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-sinergo-blue shadow-[0_0_8px_#0eb1f4]" />
                         <span className="font-medium">Predictive AI Resourcing</span>
                     </div>
                     <div className="glass p-4 rounded-xl flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-sinergo-blue" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-sinergo-blue shadow-[0_0_8px_#0eb1f4]" />
                         <span className="font-medium">Nationwide Deployment</span>
                     </div>
+
                 </div>
             </div>
         </div>

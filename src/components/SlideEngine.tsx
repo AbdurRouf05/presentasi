@@ -67,11 +67,12 @@ export default function SlideEngine({ slides }: SlideEngineProps) {
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-50 bg-white/10">
         <motion.div
-          className="h-full bg-sinergo-blue shadow-[0_0_10px_#3b82f6]"
+          className="h-full bg-sinergo-blue shadow-[0_0_10px_#0eb1f4]"
           initial={{ width: '0%' }}
           animate={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
           transition={{ duration: 0.3 }}
         />
+
       </div>
 
       {/* Slide Container */}
