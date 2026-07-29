@@ -1,0 +1,18 @@
+# Task Checklist: Attendance Fusion Pitch Deck
+
+- [ ] **STEP 1: Initialization** <!-- id: 0 -->
+  - [x] Create project folder `D:\coding\nextjs\pitchdeck-web` <!-- id: 1 -->
+  - [x] Initialize Next.js project <!-- id: 2 -->
+  - [x] Install dependencies (`framer-motion`, `lucide-react`, `clsx`, `tailwind-merge`) <!-- id: 3 -->
+- [ ] **STEP 2: Configuration** <!-- id: 4 -->
+  - [ ] Configure `tailwind.config.ts` (Neobrutalism colors & shadows) <!-- id: 5 -->
+  - [ ] Setup Global Styles (Fonts, default borders) <!-- id: 6 -->
+- [ ] **STEP 3: Content & Components** <!-- id: 7 -->
+  - [ ] Create `data/slides.ts` with 8 slides content <!-- id: 8 -->
+  - [ ] Create `components/NeoCard.tsx` <!-- id: 9 -->
+  - [ ] Create `components/SlideDeck.tsx` (Logic & Animation) <!-- id: 10 -->
+  - [ ] Implement `app/page.tsx` <!-- id: 11 -->
+  - [ ] Implement `app/layout.tsx` (Fonts) <!-- id: 12 -->
+- [ ] **STEP 4: Verification & Polish** <!-- id: 13 -->
+  - [ ] Verify responsiveness (Mobile vs Desktop) <!-- id: 14 -->
+  - [ ] Verify animations <!-- id: 15 -->
