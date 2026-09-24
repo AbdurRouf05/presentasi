@@ -1,0 +1,233 @@
+/* ─── Cards Wrapper ──────────────────────────────────────────────────────── */
+.cards-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 375px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:
+    url("/assets/Cursor SVG/cursor-text.svg") 12 12,
+    auto;
+}
+
+/* ─── Base Card ──────────────────────────────────────────────────────────── */
+.card {
+  width: 240px;
+  height: 340px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.45rem;
+  padding: 1.8rem 1.15rem 1.15rem;
+  cursor: pointer;
+  border-radius: 12px;
+  color: var(--color-white);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transform-origin: center center;
+  box-sizing: border-box;
+  user-select: none;
+  cursor:
+    url("/assets/Cursor SVG/cursor-text.svg") 12 12,
+    auto;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 1.25rem;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 800;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.card-divider-svg {
+  width: 100%;
+  height: 6px;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 2px 0 4px;
+}
+
+/* ─── Card Color Variants (Symmetric 4-Cards Layout) ───────────────────────── */
+/* Symmetrical coordinates around 50%:
+   Card 1 center: -270px -> left: calc(50% - 390px)
+   Card 2 center:  -90px -> left: calc(50% - 210px)
+   Card 3 center:  +90px -> left: calc(50% - 30px)
+   Card 4 center: +270px -> left: calc(50% + 150px)
+   Total width span: 780px (from 50%-390px to 50%+390px)
+*/
+.card-green {
+  background-color: var(--color-green);
+  left: calc(50% - 390px);
+  top: 25px;
+  transform: rotate(-4deg);
+  z-index: 1;
+}
+
+.card-darkblue {
+  background-color: var(--color-lightblue);
+  color: var(--color-dark);
+  left: calc(50% - 210px);
+  top: 38px;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.card-orange {
+  background-color: var(--color-orange);
+  color: var(--color-dark);
+  left: calc(50% - 30px);
+  top: 18px;
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+
+.card-maroon {
+  background-color: var(--color-maroon);
+  left: calc(50% + 150px);
+  top: 32px;
+  transform: rotate(4deg);
+  z-index: 4;
+}
+
+.card-pink {
+  display: none;
+}
+
+/* Expand hit area for middle cards to bridge gaps */
+.card-darkblue::after,
+.card-orange::after,
+.card-maroon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+}
+
+/* Light card divider overrides */
+.card-pink .card-divider-svg,
+.card-orange .card-divider-svg,
+.card-darkblue .card-divider-svg {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* ─── Card List ──────────────────────────────────────────────────────────── */
+.card-list {
+  list-style: none;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list li {
+  margin-bottom: 5px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.28;
+  letter-spacing: -0.2px;
+}
+
+.services-card__bullet-svg {
+  width: 10px;
+  height: 13px;
+  flex-shrink: 0;
+  margin-top: 1.5px;
+  color: currentColor;
+}
+
+/* ─── Card Sticker Variables ─────────────────────────────────────────────── */
+:root {
+  --sticker-camera-w: 80px;
+  --sticker-phone-w: 65px;
+  --sticker-smiley-w: 65px;
+  --sticker-hand-w: 65px;
+  --sticker-heart-w: 70px;
+
+  --sticker-camera-top: -30px;
+  --sticker-camera-left: 80px;
+
+  --sticker-phone-top: -28px;
+  --sticker-phone-left: 95px;
+
+  --sticker-smiley-top: -32px;
+
+  --sticker-hand-top: -28px;
+
+  --sticker-heart-top: -30px;
+  --sticker-heart-right: 15px;
+}
+
+/* ─── Card Stickers ──────────────────────────────────────────────────────── */
+.card-sticker {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-sticker svg,
+.card-sticker img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-sticker.sticker-camera,
+.card-sticker.sticker-offline {
+  width: 98px;
+  height: auto;
+  top: -46px;
+  left: 62%;
+  transform: translateX(-50%) rotate(-5deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+}
+
+.card-sticker.sticker-phone,
+.card-sticker.sticker-scale {
+  width: 95px;
+  height: auto;
+  top: -44px;
+  left: 46%;
+  transform: translateX(-50%) rotate(3deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+}
+
+.card-sticker.sticker-smiley,
+.card-sticker.sticker-key {
+  width: 96px;
+  height: auto;
+  top: -46px;
+  left: 68%;
+  transform: translateX(-50%) rotate(-4deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+}
+
+.card-sticker.sticker-hand,
+.card-sticker.sticker-pos {
+  width: 96px;
+  height: auto;
+  top: -44px;
+  left: 68%;
+  transform: translateX(-50%) rotate(7deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+}
+
+.card-sticker.sticker-heart {
+  width: var(--sticker-heart-w);
+  height: auto;
+  top: var(--sticker-heart-top);
+  right: var(--sticker-heart-right);
+  transform: rotate(1deg);
+}

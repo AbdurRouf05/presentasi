@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 135" fill="none">
+  <!-- Die-cut outer white sticker border/backing -->
+  <path d="M28 22 C38 12, 60 8, 82 10 C104 12, 122 20, 128 36 C134 50, 136 72, 130 92 C124 110, 108 124, 88 127 C68 130, 44 126, 26 116 C10 106, 4 88, 6 68 C8 48, 16 32, 28 22 Z"
+        fill="#FFFFFF" stroke="#E2DEC9" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Sticker Body (Dark Slate Charcoal) -->
+  <path d="M30 25 C40 16, 60 12, 80 14 C100 16, 117 23, 123 38 C128 51, 130 70, 125 88 C120 104, 105 117, 86 120 C68 123, 46 119, 29 110 C15 101, 10 85, 12 67 C14 49, 20 34, 30 25 Z"
+        fill="#1E232A" />
+
+  <!-- A small paper shadow curve inside -->
+  <path d="M28 108 C46 118, 70 121, 88 118 C106 114, 118 102, 123 88" 
+        stroke="#111418" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Wi-Fi Waves (Off-White / Cream Doodle) -->
+  <!-- Outer Arch -->
+  <path d="M40 50 C54 36, 82 36, 96 50" 
+        stroke="#F6F4EB" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- Middle Arch -->
+  <path d="M50 62 C60 52, 76 52, 86 62" 
+        stroke="#F6F4EB" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Dot / Source -->
+  <circle cx="68" cy="76" r="4.5" fill="#F6F4EB"/>
+
+  <!-- Diagonal Strike-through (Offline Slash) in Vivid Accent Coral/White -->
+  <path d="M36 78 L98 34" 
+        stroke="#1E232A" stroke-width="9" stroke-linecap="round"/>
+  <path d="M36 78 L98 34" 
+        stroke="#FF6B6B" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Mini Lightning / Spark (Local Power) -->
+  <polygon points="106,48 99,60 105,60 98,72 110,58 104,58" fill="#E8F878"/>
+
+  <!-- "OFFLINE" Pill Badge at the bottom of the sticker -->
+  <g transform="translate(32, 88) rotate(-4)">
+    <!-- Pill background -->
+    <rect x="0" y="0" width="70" height="20" rx="10" fill="#E8F878" stroke="#1E232A" stroke-width="2.5"/>
+    <text x="35" y="14" font-family="'DM Sans', system-ui, sans-serif" font-weight="900" font-size="10.5" fill="#1E232A" text-anchor="middle" letter-spacing="1">OFFLINE</text>
+  </g>
+
+  <!-- Cute Sparkles -->
+  <path d="M22 42 Q25 45 22 48 Q19 45 22 42 Z" fill="#F6F4EB"/>
+  <circle cx="114" cy="85" r="2.5" fill="#E8F878"/>
+</svg>

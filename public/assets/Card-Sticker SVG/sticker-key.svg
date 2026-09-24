@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 130" fill="none">
+  <!-- Die-cut outer white sticker border/backing -->
+  <path d="M30 18 C52 10, 88 12, 108 24 C126 36, 130 58, 126 82 C122 106, 106 124, 82 127 C58 130, 28 124, 15 106 C2 88, 6 62, 12 40 C18 26, 22 22, 30 18 Z"
+        fill="#FFFFFF" stroke="#E2DEC9" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Sticker Body (Punchy Cornflower Blue) -->
+  <path d="M32 21 C53 13, 86 15, 105 26 C122 37, 126 57, 122 79 C118 102, 103 119, 80 122 C58 125, 29 119, 17 102 C5 86, 9 61, 15 41 C20 28, 24 24, 32 21 Z"
+        fill="#779DFE" />
+
+  <!-- A paper crease/shadow inside -->
+  <path d="M22 96 C40 114, 76 118, 100 106" 
+        stroke="#5C82E8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Unlocked Padlock Arch & Golden Key Composition -->
+  <g transform="translate(24, 20)">
+    <!-- Unlocked Shackle (Gembok terbuka - bebas sewa) -->
+    <path d="M30 38 L30 24 C30 14, 46 14, 46 24" 
+          stroke="#FDFBF7" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Key Body (Doodle Master Key angled diagonally) -->
+    <g transform="rotate(32, 45, 50)">
+      <!-- Key Ring Head -->
+      <circle cx="24" cy="45" r="14" fill="#FFE259" stroke="#222B45" stroke-width="3"/>
+      <!-- Inner hole of key head (clover / heart style) -->
+      <circle cx="24" cy="45" r="5" fill="#779DFE" stroke="#222B45" stroke-width="2"/>
+      
+      <!-- Key Shaft -->
+      <rect x="36" y="42.5" width="34" height="5.5" rx="2.5" fill="#FFE259" stroke="#222B45" stroke-width="2.5"/>
+      
+      <!-- Key Teeth / Bit -->
+      <path d="M60 47 L60 56 L64 56 L64 47 Z" fill="#FFE259" stroke="#222B45" stroke-width="2"/>
+      <path d="M66 47 L66 53 L70 53 L70 47 Z" fill="#FFE259" stroke="#222B45" stroke-width="2"/>
+    </g>
+
+    <!-- "LIFETIME" / "1x BAYAR" Banner Tag -->
+    <g transform="translate(10, 68) rotate(-4)">
+      <rect x="0" y="0" width="68" height="19" rx="9.5" fill="#FDFBF7" stroke="#222B45" stroke-width="2.5"/>
+      <text x="34" y="13.5" font-family="'DM Sans', system-ui, sans-serif" font-weight="900" font-size="9.5" fill="#222B45" text-anchor="middle" letter-spacing="0.8">LIFETIME</text>
+    </g>
+  </g>
+
+  <!-- Sparkle of Ownership Freedom -->
+  <path d="M104 36 Q107 41 112 41 Q107 41 104 46 Q104 41 99 41 Q104 41 104 36 Z" fill="#FFE259"/>
+  <circle cx="112" cy="74" r="2.5" fill="#FDFBF7"/>
+  <circle cx="22" cy="40" r="2" fill="#FFE259"/>
+</svg>

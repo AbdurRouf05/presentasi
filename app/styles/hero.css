@@ -1,0 +1,58 @@
+/* ─── Hero / Content Section ─────────────────────────────────────────────── */
+.content-section {
+    min-height: 100vh;
+    padding: 85px 24px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.title-container {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.main-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: var(--color-dark);
+    margin: 0;
+    cursor: url("/assets/Cursor SVG/cursor-text.svg") 12 12, auto;
+}
+
+.italic-text {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.title-underline-svg {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 120px;
+    height: auto;
+    color: var(--color-dark);
+}
+
+.title-underline-svg path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+/* Purple theme adaptation for ServiceCards */
+.service-cards-wrapper .main-title {
+    color: #ffffff !important;
+}
+.service-cards-wrapper .title-underline-svg {
+    color: #ffffff !important;
+}

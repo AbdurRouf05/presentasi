@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   overlapping-sections.css — Sticky Layered Stacking & Card Depth Effects
+   Each section stays sticky at top: 0 and the next section slides over it
+───────────────────────────────────────────────────────────────────────────── */
+
+/* Make body and html allow sticky stacking */
+html, body {
+    overflow-x: clip !important;
+}
+
+/* Base class for any overlapping slide section */
+.overlap-section {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    will-change: transform, opacity;
+    transition: transform 0.25s ease-out, filter 0.25s ease-out;
+}
+
+/* Give top curved corners and elevated shadow to incoming overlapping slides */
+.overlap-section.overlap-card {
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    box-shadow: 0 -25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Layer stacking orders */
+.overlap-layer-1 { z-index: 10; }
+.overlap-layer-2 { z-index: 20; }
+.overlap-layer-3 { z-index: 30; }
+.overlap-layer-4 { z-index: 40; }
+.overlap-layer-5 { z-index: 50; }
+.overlap-layer-6 { z-index: 60; }
+.overlap-layer-7 { z-index: 70; }
+.overlap-layer-8 { z-index: 80; }
+.overlap-layer-9 { z-index: 90; }
+.overlap-layer-10 { z-index: 100; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .overlap-section.overlap-card {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.25);
+    }
+}
