@@ -28,5 +28,8 @@
 /* Business Sections (Market, Traction, Pricing, Trust) */
 @import './styles/business-sections.css';
 
+/* Ringkasan Sebelum vs Sesudah P2MW */
+@import './styles/p2mw-summary.css';
+
 /* Overlapping Stacking Sections & Card Depth */
 @import './styles/overlapping-sections.css';

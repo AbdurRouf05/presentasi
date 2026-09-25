@@ -13,6 +13,7 @@ import TractionSection from '@/components/TractionSection';
 import MarketSizingSection from '@/components/MarketSizingSection';
 import ScrollVelocity from '@/components/ScrollVelocity';
 import DoubleMarquee from '@/components/DoubleMarquee';
+import BeforeAfterP2MWSection from '@/components/BeforeAfterP2MWSection';
 import Footer from '@/components/Footer';
 import TransitionScribble from '@/components/TransitionScribble';
 import CursorBubble from '@/components/CursorBubble';
@@ -78,6 +79,11 @@ export default function Home() {
                 {/* 7. POTENSI PASAR: TAM - SAM - SOM Kuantitatif [UNGU ROYAL] */}
                 <div className="overlap-section overlap-card overlap-layer-7" style={{ backgroundColor: '#7c3aed' }}>
                     <MarketSizingSection />
+                </div>
+
+                {/* 8. RINGKASAN TRANSFORMASI: Sebelum & Sesudah P2MW [PUTIH BERSIH] */}
+                <div className="overlap-section overlap-card overlap-layer-8" style={{ backgroundColor: '#ffffff' }}>
+                    <BeforeAfterP2MWSection />
                 </div>
             </main>
 

@@ -1,0 +1,397 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   p2mw-summary.css — Slide Ringkasan Sebelum dan Sesudah P2MW
+   Side-by-side Before vs After Transformation Showcase (Optimized for 1080p Deck)
+───────────────────────────────────────────────────────────────────────────── */
+
+.p2mw-summary-section {
+    min-height: 100vh;
+    padding: 55px 24px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    color: #0f172a;
+    width: 100%;
+    overflow: hidden;
+}
+
+.p2mw-summary-container {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+.p2mw-summary-header {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 16px;
+}
+
+.p2mw-summary-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f3e8ff;
+    color: #7c3aed;
+    border: 1px solid #d8b4fe;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.p2mw-summary-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: clamp(1.7rem, 2.5vw, 2.25rem);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+
+.p2mw-summary-title span {
+    color: #7c3aed;
+}
+
+.p2mw-summary-desc {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #475569;
+    margin: 0 auto;
+}
+
+/* 2-Columns Grid */
+.p2mw-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+    margin-bottom: 14px;
+}
+
+/* Base Card Column */
+.p2mw-column-card {
+    border-radius: 20px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Column 1: Before */
+.p2mw-column-card.before-card {
+    background: #fffcfb;
+    border: 1.5px solid #fecdd3;
+    box-shadow: 0 8px 24px rgba(225, 29, 72, 0.06);
+}
+
+.p2mw-column-card.before-card:hover {
+    box-shadow: 0 14px 34px rgba(225, 29, 72, 0.1);
+}
+
+/* Column 2: After */
+.p2mw-column-card.after-card {
+    background: #ffffff;
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 12px 32px rgba(124, 58, 237, 0.12);
+}
+
+.p2mw-column-card.after-card:hover {
+    box-shadow: 0 18px 44px rgba(124, 58, 237, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Column Headers */
+.p2mw-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.p2mw-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+}
+
+.before-card .p2mw-badge-tag {
+    background: #ffe4e6;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+}
+
+.after-card .p2mw-badge-tag {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.p2mw-phase-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.after-card .p2mw-phase-label {
+    color: #7c3aed;
+    font-weight: 800;
+}
+
+/* Column Title */
+.p2mw-card-subtitle {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.before-card .p2mw-card-subtitle {
+    color: #9f1239;
+}
+
+.after-card .p2mw-card-subtitle {
+    color: #6d28d9;
+}
+
+/* Browser Mockup Frame */
+.p2mw-browser-mockup {
+    background: #0f172a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.p2mw-browser-bar {
+    background: #1e293b;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.p2mw-browser-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.p2mw-browser-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.p2mw-browser-dots span:nth-child(1) { background: #ef4444; }
+.p2mw-browser-dots span:nth-child(2) { background: #f59e0b; }
+.p2mw-browser-dots span:nth-child(3) { background: #10b981; }
+
+.p2mw-browser-url {
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 0.68rem;
+    font-family: monospace;
+    padding: 2px 8px;
+    border-radius: 5px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.p2mw-browser-img-wrap {
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+.p2mw-browser-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.p2mw-column-card:hover .p2mw-browser-img {
+    transform: scale(1.02);
+}
+
+.p2mw-browser-caption {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Feature Point Cards (4 Items Grid) */
+.p2mw-points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+}
+
+.p2mw-point-card {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 9px 12px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.before-card .p2mw-point-card {
+    background: rgba(254, 205, 211, 0.25);
+    border: 1px solid rgba(254, 205, 211, 0.5);
+}
+
+.after-card .p2mw-point-card {
+    background: #fbf7ff;
+    border: 1px solid #e9d5ff;
+}
+
+.p2mw-point-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.before-card .p2mw-point-icon {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.after-card .p2mw-point-icon {
+    background: #7c3aed;
+    color: #ffffff;
+}
+
+.p2mw-point-content {
+    flex: 1;
+}
+
+.p2mw-point-title {
+    font-size: 0.84rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 2px;
+}
+
+.before-card .p2mw-point-title {
+    color: #881337;
+}
+
+.after-card .p2mw-point-title {
+    color: #5b21b6;
+}
+
+.p2mw-point-desc {
+    font-size: 0.74rem;
+    line-height: 1.4;
+    color: #475569;
+}
+
+/* Bottom Catalyst Banner */
+.p2mw-catalyst-banner {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    border-radius: 14px;
+    padding: 10px 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18);
+}
+
+.p2mw-catalyst-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.15rem;
+}
+
+.p2mw-catalyst-content {
+    flex: 1;
+}
+
+.p2mw-catalyst-heading {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+    color: #fdf4ff;
+}
+
+.p2mw-catalyst-text {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.p2mw-catalyst-text strong {
+    color: #fef08a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .p2mw-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+    .p2mw-summary-section {
+        padding: 40px 16px 30px;
+        min-height: auto;
+    }
+    .p2mw-browser-img-wrap {
+        height: 140px;
+    }
+    .p2mw-catalyst-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}

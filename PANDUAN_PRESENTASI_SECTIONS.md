@@ -150,17 +150,47 @@ Slide ungu royal menampilkan **3 kartu market sizing**: TAM (240.133 UMK Kuliner
 
 ---
 
-## Section 10: Rangkuman Fitur Inti (Marquee - Transisi Cepat)
+## Section 10: Ringkasan Transformasi Sebelum & Sesudah P2MW (Slide Kunci Dampak Program)
 
 ### Apa yang Ditunjukkan di Layar
-Scroll sekilas melewati dua kolom lencana fitur yang bergerak dinamis naik-turun. **Jangan berhenti lama**, cukup lewati sambil memberikan satu kalimat transisi cepat.
+Slide putih bersih dengan dua kolom perbandingan berdampingan (*side-by-side*) yang meluncur mulus tepat setelah slide Potensi Ukuran Pasar:
+1. **Kotak Kiri (Sebelum P2MW):** Mockup browser landing page awal (`kalibra-demo.free-tier.app`) dengan 4 kartu evaluasi kritis:
+   - Opsi gratisan hosting, database & domain (tanpa jaminan SLA, rawan limit).
+   - Tidak diketahui adanya celah keamanan atau celah kebocoran data (belum ada audit).
+   - Belum ada tim yang tersertifikasi (coding otodidak).
+   - Tidak ada fitur keuangan standar PSAK dan perhitungan auto HPP resep BOM.
+2. **Kotak Kanan (Sesudah P2MW):** Mockup browser landing page modern (`https://kalibra.id • Resmi Didukung P2MW`) dengan 4 kartu pencapaian nyata (lawan langsung):
+   - Server VPS produksi mandiri berbayar, domain resmi, SLA uptime 99.9% hemat operasional.
+   - Lolos uji audit celah keamanan (zero-vulnerability) & enkripsi lokal Dexie aman.
+   - Tim developer tersertifikasi resmi BNSP (Software Engineering / Cyber Security).
+   - Fitur akuntansi PSAK lengkap, neraca otomatis, diagram arus kas, & pemotongan bahan resep sub-gram presisi 0,1 gram.
+
+### Kalimat ke Bapak/Ibu Penilai:
+> "Tepat setelah kita melihat potensi pasar yang begitu besar, izinkan kami merangkum secara komprehensif bagaimana program P2MW benar-benar menjadi katalisator pengungkit bagi kesiapan produk dan bisnis KalibraOS, Bapak dan Ibu penilai:  
+>  
+> - **Sebelum P2MW:** Kami beroperasi dengan serba keterbatasan. Seluruh infrastruktur server, database, dan domain masih menumpang pada opsi gratisan (*free-tier*) yang rentan limit kuota. Kami belum pernah melakukan uji penetrasi celah keamanan sehingga risiko kebocoran data tenant sangat mengkhawatirkan. Tim kami belum memiliki sertifikasi kompetensi formal, dan aplikasinya murni hanya kasir biasa tanpa pencatatan resep sub-gram maupun laporan keuangan PSAK.  
+>  
+> - **Sesudah Didanai P2MW:** Berkat fasilitasi hibah Rp 10.500.000, terjadi lompatan kualitas 180 derajat:  
+>   1. Pertama, kami kini memiliki **VPS produksi mandiri berbayar** dengan domain resmi ber-SLA 99.9%, yang berkat arsitektur Local-First, biaya server riilnya sangat hemat hanya Rp 2,13 juta per tahun.  
+>   2. Kedua, sistem kami telah **lolos uji audit celah keamanan** dengan enkripsi lokal yang menjamin nol kebocoran data merchant.  
+>   3. Ketiga, kompetensi SDM kami diakui secara nasional dengan **Sertifikasi BNSP resmi**.  
+>   4. Dan keempat, KalibraOS bertransformasi menjadi **ERP F&B terpadu** dengan perhitungan resep sub-gram BOM otomatis serta laporan akuntansi standar PSAK.  
+>  
+> Transformasi ini terbukti langsung di lapangan: basis mitra kami tumbuh +250% dari 2 menjadi 7 tenant aktif, menghasilkan omzet Rp 20,9 juta dan profitabilitas bersih mencapai Rp 18,8 juta."
+
+---
+
+## Section 11: Rangkuman Fitur Inti (Marquee - Transisi Cepat)
+
+### Apa yang Ditunjukkan di Layar
+Scroll sekilas melewati dua kolom lencana fitur yang bergerak dinamis naik-turun. **Jangan berhenti lama**, cukup lewati sambil memberikan satu kalimat transisi cepat sebelum masuk ke penutup.
 
 ### Kalimat ke Bapak/Ibu Penilai (Cepat & Singkat ~10 Detik):
 > "Secara keseluruhan, seluruh fitur inti yang bergerak di layar ini—mulai dari engine 100% offline-first, manajemen resep sub-gram, hingga kesiapan multi-cabang—sudah terintegrasi penuh dan teruji siap pakai di lapangan."
 
 ---
 
-## Section 11: Tim Founder & Penutup Akhir (Singkat & To the Point)
+## Section 12: Tim Founder & Penutup Akhir (Singkat & To the Point)
 
 ### Apa yang Ditunjukkan di Layar
 Footer menampilkan 4 anggota tim mahasiswa founder (Abdur Rouf, Adam Paundra, Wahyu Tegar, Ahmad Rafi) serta logo besar KALIBRA.OS.

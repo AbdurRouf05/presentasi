@@ -361,6 +361,17 @@ export default function Navbar() {
                                         <h4 className="nav-work-title">vs Moka &amp; Odoo ERP</h4>
                                     </div>
                                 </a>
+                                 <a href="#ringkasan-p2mw" className="nav-work-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div className="nav-work-item__img-wrap" style={{ background: '#f3e8ff', color: '#7c3aed' }}>
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                        </svg>
+                                    </div>
+                                    <div className="nav-work-item__text">
+                                        <span className="nav-work-badge badge-purple" style={{ background: '#f3e8ff', color: '#7c3aed' }}>Transformasi</span>
+                                        <h4 className="nav-work-title">Sebelum vs Sesudah P2MW</h4>
+                                    </div>
+                                </a>
                                 <a href="#tim" className="nav-work-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                                     <div className="nav-work-item__img-wrap" style={{ background: '#e0e7ff', color: '#4338ca' }}>
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
