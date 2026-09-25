@@ -33,3 +33,6 @@
 
 /* Overlapping Stacking Sections & Card Depth */
 @import './styles/overlapping-sections.css';
+
+/* Invoices Drawer & 3D Stacked Cards Deck */
+@import './styles/invoices-drawer.css';
