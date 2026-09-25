@@ -78,13 +78,13 @@ export default function InvoicesDrawer({ isOpen, onClose }) {
                     <div className="invoices-header-left">
                         <div className="invoices-header-badge">
                             <span className="badge-pulse-dot"></span>
-                            <span className="badge-text">Traksi Penjualan Riil Terverifikasi</span>
+                            <span className="badge-text">5 Faktur Tenant Terbaru &bull; Akselerasi P2MW</span>
                         </div>
                         <h3 className="invoices-drawer-title">
-                            7 Faktur Tenant KalibraOS
+                            5 Faktur Tenant Terbaru KalibraOS
                         </h3>
                         <p className="invoices-drawer-subtitle">
-                            Total Omzet Riil: <strong className="highlight-green">Rp 20.930.000</strong> (100% Lunas &bull; 7 Outlet Aktif Paket Lifetime Deal)
+                            Realisasi Omzet 5 Mitra Baru: <strong className="highlight-green">Rp 14.950.000</strong> (100% Lunas &bull; Akumulasi 7 Tenant: Rp 20.930.000)
                         </p>
                     </div>
 
@@ -414,18 +414,18 @@ export default function InvoicesDrawer({ isOpen, onClose }) {
                 {/* 3. Footer Summary Strip */}
                 <div className="invoices-drawer-footer">
                     <div className="footer-metric-pill">
-                        <span className="metric-label">Total Omzet:</span>
-                        <span className="metric-val text-green">Rp 20.930.000</span>
+                        <span className="metric-label">Omzet 5 Tenant Baru:</span>
+                        <span className="metric-val text-green">Rp 14.950.000</span>
                     </div>
                     <div className="footer-metric-divider"></div>
                     <div className="footer-metric-pill">
-                        <span className="metric-label">Jumlah Tenant:</span>
-                        <span className="metric-val">7 Outlet UMKM</span>
+                        <span className="metric-label">Total Omzet Kumulatif:</span>
+                        <span className="metric-val">Rp 20.930.000 (7 Outlet)</span>
                     </div>
                     <div className="footer-metric-divider"></div>
                     <div className="footer-metric-pill">
-                        <span className="metric-label">Rata-rata Transaksi:</span>
-                        <span className="metric-val">Rp 2.990.000 / Tenant</span>
+                        <span className="metric-label">Rata-rata Nilai Kontrak:</span>
+                        <span className="metric-val">Rp 2.990.000 / Outlet</span>
                     </div>
                     <div className="footer-metric-divider"></div>
                     <div className="footer-metric-pill">

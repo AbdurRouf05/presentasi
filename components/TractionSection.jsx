@@ -30,13 +30,13 @@ export default function TractionSection() {
                     ))}
                 </div>
 
-                {/* Primary Interactive CTA: Buka 7 Bukti Faktur Tenant */}
+                {/* Primary Interactive CTA: Buka 5 Bukti Faktur Tenant Terbaru */}
                 <div className="traction-invoices-cta-wrap">
                     <button 
                         type="button" 
                         className="btn-open-invoices"
                         onClick={() => setIsInvoicesOpen(true)}
-                        aria-label="Lihat 7 Faktur Penjualan Tenant"
+                        aria-label="Lihat 5 Faktur Penjualan Tenant Terbaru"
                     >
                         <div className="btn-invoices-glow"></div>
                         <div className="btn-invoices-content">
@@ -50,11 +50,11 @@ export default function TractionSection() {
                                 </svg>
                             </div>
                             <div className="btn-invoices-text">
-                                <span className="btn-invoices-label">BUKTI LEGALITAS & PEMBAYARAN RIIL</span>
-                                <span className="btn-invoices-heading">Lihat 7 Arsip Faktur Tenant (Total Omzet Rp 20.930.000)</span>
+                                <span className="btn-invoices-label">BUKTI VALIDASI PASAR & REALISASI MONEV</span>
+                                <span className="btn-invoices-heading">Lihat 5 Arsip Faktur Tenant Terbaru (Akselerasi P2MW)</span>
                             </div>
                             <div className="btn-invoices-badge">
-                                <span>7 Faktur Lunas</span>
+                                <span>5 Faktur Terbaru Lunas</span>
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12" />
                                     <polyline points="12 5 19 12 12 19" />
@@ -89,7 +89,7 @@ export default function TractionSection() {
                             className="comp-faktur-trigger"
                             onClick={() => setIsInvoicesOpen(true)}
                         >
-                            <span>📄 Buka 7 Faktur Lunas</span>
+                            <span>📄 Buka 5 Faktur Terbaru</span>
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12" />
                                 <polyline points="12 5 19 12 12 19" />
